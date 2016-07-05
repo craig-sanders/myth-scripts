@@ -2,21 +2,23 @@
 
 My mythtv-related scripts.
 
-very useful:
+Very useful:
 
  - myth-list-new.sh          -- list new recordings
  - myth-list-queue.sh        -- list the myth job queue
  - myth-list-titles.sh       -- list recordings
 
-not so useful:
+Not so useful:
 
- - myth-list-transcoders.sh  -- list transcodersh
+ - myth-list-transcoders.sh  -- list transcoders
 
+See the [wiki](https://github.com/craig-sanders/myth-scripts/wiki) for
+more details about each script.
 
 ---
 
-All of these scripts interact with the `mythconverg` mysql database
-directly.
+Note: all of these scripts interact with the `mythconverg` mysql
+database directly.
 
 They assume that there is a properly configured `~/.my.cnf` file with
 authentication details.
