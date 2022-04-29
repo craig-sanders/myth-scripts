@@ -176,7 +176,7 @@ function exec_sql2 () {
   mysql -h $MYSQL_HOST mythconverg -Bse "$1"
 }
 
-FIELDS="substr(title,1,20) as title, substr(subtitle,1,20) as subtitle, starttime,(filesize/(1024*1024*1024)) as GB"
+FIELDS="substr(title,1,20) as title, substr(subtitle,1,20) as subtitle, CONVERT_TZ(starttime,'GMT','Australia/Melbourne') AS starttime, (filesize/(1024*1024*1024)) as GB"
 [ "$HNAME" = "1" ] && FIELDS="$FIELDS, hostname"
 [ "$FNAME" = "1" ] && FIELDS="$FIELDS, basename"
 

@@ -109,7 +109,7 @@ if [ -n "$WATCHED" ] ; then
 fi
 
 
-FIELDS="substr(title,1,20) as title, substr(subtitle,1,20) as subtitle, starttime,(filesize/(1024*1024*1024)) as GB, recordingprofiles.name as Transcoder,basename"
+FIELDS="substr(title,1,20) as title, substr(subtitle,1,20) as subtitle, CONVERT_TZ(starttime,'GMT','Australia/Melbourne') AS starttime, (filesize/(1024*1024*1024)) as GB, recordingprofiles.name as Transcoder,basename"
 if [ -n "$BNAME" ] ; then
   FIELDS="basename"
 fi
